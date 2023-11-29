@@ -8,7 +8,9 @@
     background-color: #ebe1c9;
     display: flex;
     position: fixed;
+    top: 0px;
     align-items: center;
+    
 }
 .logo{
     width: 80px;
