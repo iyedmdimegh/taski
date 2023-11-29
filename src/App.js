@@ -1,8 +1,9 @@
 import './App.css';
 import Intro from './components/Intro/Intro'
 import Sign from './components/Sign/Sign'
+import Tasklist from './components/Tasklist/Tasklist';
 
-const tasksList=[
+const taskList=[
   {
     id:"id1",
     name:"Do dishes",
@@ -23,10 +24,12 @@ const tasksList=[
 
 
 function App() {
+  
   return (
     <div className="App">
       <Intro/>
       <Sign className="sign-pos"/>
+      <Tasklist taskList={taskList} />
     </div>
   );
 }
