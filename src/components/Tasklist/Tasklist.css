@@ -1,0 +1,8 @@
+.tasks-container{
+    background-color: #ece1ca;
+    width: 70%;
+    margin: 0 15% 0 15%;
+    padding: 10px 0;
+    border: 1px solid #ede1cb;
+    border-radius: 8px;
+}
