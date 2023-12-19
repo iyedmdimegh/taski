@@ -11,11 +11,11 @@ function FilterTasks (prop){
     
     const [selectedDate, setSelectedDate] = useState(null);
     const [name, setName] = useState("");
-    const popupContainer = document.getElementById('popupContainer');
+    const [showPopup, setShowPopup] = useState(false);
     const handleAddTask = () => {
-        if(name==="" || selectedDate===null){
-            popupContainer.classList.add('show-popup');
-            setTimeout(()=>{popupContainer.classList.remove('show-popup');}, 6000);
+        if(name==="" || !selectedDate){
+            setShowPopup(true);
+            setTimeout(()=>{setShowPopup(false);}, 6000);
         }
         
         else{
@@ -54,11 +54,11 @@ function FilterTasks (prop){
                 
             </form>
             <button className="t-add-btn" onClick={handleAddTask}>Add</button>
-            <div id="popupContainer" className="popup">
+            {showPopup &&(<div id="popupContainer" className="popup">
                 <div className="popup-content">
                     <p>Invalid Entries</p>
                 </div>
-            </div>
+            </div>)}
         </div>
     )
 }

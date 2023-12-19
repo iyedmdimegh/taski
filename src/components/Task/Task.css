@@ -1,13 +1,10 @@
 .task-div{
-    width: 80%;
+    width: 85%;
     height: 40px;
-	background-color:#8dc2d6;
-	border-radius:8px;
-    /* box-shadow: 0px 0px 16px 4px #525252; */
-	cursor:pointer;
-	color:#ffffff;
-	
-	
+	  background-color:#8dc2d6;
+	  border-radius:8px;
+	  cursor:pointer;
+	  color:#ffffff;
     padding: 2rem 1rem  ;   
     letter-spacing: 1px;
     margin: 10px auto ;
@@ -19,9 +16,7 @@
 .notCrossed{
     color:#ffffff;
 	  font-size:28px;
-    letter-spacing: 1px;
-    
-    
+    letter-spacing: 1px;   
 }
 .crossed{
     text-decoration: line-through;
@@ -29,7 +24,6 @@
 	  font-size:28px;
     letter-spacing: 1px;
 }
-
 .data-container {
     display: flex;
     align-items: center;
