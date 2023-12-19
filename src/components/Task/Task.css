@@ -1,39 +1,35 @@
 .task-div{
     width: 80%;
     height: 40px;
-	background-color:#302c22;
+	background-color:#8dc2d6;
 	border-radius:8px;
     /* box-shadow: 0px 0px 16px 4px #525252; */
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	
-    padding: 2rem 2rem  ;   
+	
+    padding: 2rem 1rem  ;   
     letter-spacing: 1px;
     margin: 10px auto ;
     display: flex;
     align-items: center;
     position: relative;
-    
+    gap: 10px;
 }
 .notCrossed{
     color:#ffffff;
-	font-family:Arial;
-	font-size:28px;
+	  font-size:28px;
     letter-spacing: 1px;
+    
     
 }
 .crossed{
     text-decoration: line-through;
-    color:#ffffff;
-	font-family:Arial;
-	font-size:28px;
+    color:#ffffff;	
+	  font-size:28px;
     letter-spacing: 1px;
 }
-.check-box{
-    position:absolute;
-    right: 30%;
-}
+
 .data-container {
     display: flex;
     align-items: center;
@@ -100,4 +96,14 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+  .tl-date-container{
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
+    border:2px solid black;
+    border-radius: 8px;
+    padding: 6px 5px 0;
+    background-color: #354d55;
+    text-align: center;
   }

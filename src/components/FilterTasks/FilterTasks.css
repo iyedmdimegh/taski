@@ -1,0 +1,111 @@
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      left: -100px;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+}
+@keyframes fadeInAndOut {
+    from {
+      opacity: 0;
+      
+    }
+  
+    20% {
+      opacity: 1;
+      
+    }
+  
+    /* Additional keyframe for the second step */
+    80% {
+      opacity: 1;
+      
+    }
+  
+    to {
+      opacity: 0;
+      
+    }
+  }
+  
+
+.t-label{
+    font-size:24px;
+    cursor:pointer;
+    margin-right: 10px;
+}
+.t-input-container{
+    width: 600px;
+    height: 100px;
+    font-size:18px;
+    letter-spacing: 1px;
+    text-align: center;    
+    letter-spacing: 1px;
+    background-color:#979c9b;
+    border-radius:6px;
+    border: 2px solid black;
+    padding:20px 0px 100px;
+    margin: 50px auto 30px auto ;
+    animation: fadeInLeft 2s ease;
+    position: relative;
+}
+.t-input-parag{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.f-form{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px 0px;
+    align-items: center;
+    
+}
+.t-input {
+    width: 90%;
+    height:2rem;
+    margin: auto;
+    border-radius: 4px;
+    font-size:14px;
+    letter-spacing: 1px;
+    text-align: center;    
+    letter-spacing: 1px;
+    
+
+}
+.t-add-btn{
+    width: 30%;
+    height:2rem;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size:14px;
+    letter-spacing: 1px;
+    background-color: #cee6e0;
+    cursor: pointer;
+}
+.popup {
+    display: none;
+    width: 30%;
+    background-color: #d20303;
+    padding: 5px 20px;
+    margin:4px auto;
+    border: 2px solid #010101;
+    
+    max-width: 300px;
+    opacity: 1;
+    /* transition: opacity 1s ease-in-out; */
+    animation: fadeInAndOut 6s ease;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .show-popup {
+    display: block;
+    
+  }

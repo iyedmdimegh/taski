@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Fade Popup Example</title>
+  
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+      }
+      
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .popup-content {
+        text-align: center;
+      }
+      
+      .show-popup {
+        display: block;
+      }
+      
+      .hide-popup {
+        display: none;
+        opacity: 0;
+      }
+      
+</style>
+<body>
+
+  <!-- Trigger button -->
+  <button id="showPopupButton">Show Popup</button>
+
+  <!-- Popup container -->
+  <div id="popupContainer" class="popup">
+    <div class="popup-content">
+      <p>This is a popup!</p>
+    </div>
+  </div>
+
+  <script >
+    document.addEventListener('DOMContentLoaded', function () {
+        const showPopupButton = document.getElementById('showPopupButton');
+        const popupContainer = document.getElementById('popupContainer');
+      
+        showPopupButton.addEventListener('click', function () {
+          // Show the popup
+          popupContainer.classList.add('show-popup');
+          
+          // Auto-hide the popup after 2 seconds
+          setTimeout(function () {
+            popupContainer.classList.remove('show-popup');
+          }, 2000);
+        });
+      });
+      
+  </script>
+</body>
+</html>

@@ -9,10 +9,10 @@ function Intro(){
         <div className="intro-box">
             <img  src={logo} className="logo" alt=""/>
             <div className="social-media">
-                <img src={facebook} alt=""/>
-                <img src={instagram} alt=""/>
+                <a href="https://www.facebook.com/iyed.medimegh.56/"><img src={facebook} alt="" /></a>
+                <a href="https://www.instagram.com/iyed.mdimegh/"><img src={instagram} alt=""/></a>
                 <img src={whatsapp} alt=""/>
-                <img src={linkedin} alt=""/>
+                <a href="https://www.linkedin.com/in/iyed-mdimegh-21b1b5285/"><img src={linkedin} alt=""/></a>
             </div>
         </div>
     )
