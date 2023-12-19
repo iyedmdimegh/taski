@@ -29,14 +29,17 @@ function App() {
   const addTask=(newTask)=>{
     setTaskList((prevtaskList)=>{return([...prevtaskList,newTask])})
   }
+  const deleteTaskById=(taskId)=>{
+    setTaskList((prevTaskList) => prevTaskList.filter((task) => task.id !== taskId));
+  }
   return (
     <div className="App">
       <Intro/>
       <Sign className="sign-pos"/>
       <FilterTasks task={addTask}/>
       
-      <Tasklist taskList={taskList} />
-    </div>
+      <Tasklist taskList={taskList} deleteTaskHandler={deleteTaskById}/>
+      </div>
   );
 }
 
