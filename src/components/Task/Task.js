@@ -10,15 +10,17 @@ function Task(prop){
         setpClass(shouldCross ? 'crossed' : 'notCrossed');
         
     }
-    
-    
+    console.log(prop.date)
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    // const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formatter = new Intl.DateTimeFormat('en-UK', options);
+    const formattedDate = formatter.format(prop.date);
     return(
         <div className='task-div'>
-            {/* <p className={pClass}>{prop.name}</p> */}
-            {/* <div>
-                <date variable={prop.date}/>
-            </div> */}
-            {/* <input className='check-box' type="checkbox" onChange={handleCheckboxChange} /> */}
+            <div className='tl-date-container'>
+                <p >{formattedDate}</p>
+                
+            </div>
             <label className={pClass}>{prop.name}
             <input className='check-box' type="checkbox" onChange={handleCheckboxChange}/>
             <span className="checkmark"></span>

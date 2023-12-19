@@ -2,8 +2,9 @@ import './App.css';
 import Intro from './components/Intro/Intro'
 import Sign from './components/Sign/Sign'
 import Tasklist from './components/Tasklist/Tasklist';
-
-const taskList=[
+import FilterTasks from './components/FilterTasks/FilterTasks'
+import React,{useState} from 'react';
+const DUMMY_TASK_LIST=[
   {
     id:"id1",
     name:"Do dishes",
@@ -24,11 +25,16 @@ const taskList=[
 
 
 function App() {
-  
+  const [taskList,setTaskList]=useState(DUMMY_TASK_LIST);
+  const addTask=(newTask)=>{
+    setTaskList((prevtaskList)=>{return([...prevtaskList,newTask])})
+  }
   return (
     <div className="App">
       <Intro/>
       <Sign className="sign-pos"/>
+      <FilterTasks task={addTask}/>
+      
       <Tasklist taskList={taskList} />
     </div>
   );
